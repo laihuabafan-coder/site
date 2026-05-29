@@ -1,11 +1,641 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>【アグリテックハイスクール】新時代のスマート農業高校・オープンキャンパス開催中！</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            900: '#14532d',
+                        },
+                        tech: {
+                            500: '#06b6d4',
+                            600: '#0891b2',
+                            900: '#164e63',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Helvetica Neue"', 'Arial', '"Hiragino Kaku Gothic ProN"', 'Meiryo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Lucide Icons (SVGアイコン描画用) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body>
-    
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+    <!-- ヘッダー -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <div class="p-2 bg-brand-600 rounded-lg text-white">
+                    <i data-lucide="sprout" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <span class="text-xs text-brand-700 font-bold block leading-none">最先端アグリテックを学ぶ</span>
+                    <span class="text-lg font-extrabold tracking-tight text-gray-900">未来農業高等学院</span>
+                </div>
+            </div>
+            <nav class="hidden md:flex space-x-8 text-sm font-medium text-gray-600">
+                <a href="#why-us" class="hover:text-brand-600 transition">農業高校の今</a>
+                <a href="#features" class="hover:text-brand-600 transition">3つの強み</a>
+                <a href="#voices" class="hover:text-brand-600 transition">先輩の声</a>
+                <a href="#event" class="hover:text-brand-600 transition">体験入学</a>
+            </nav>
+            <div>
+                <a href="#register" class="bg-brand-600 hover:bg-brand-700 text-white text-sm font-bold px-4 py-2.5 rounded-full shadow-md hover:shadow-lg transition flex items-center space-x-1">
+                    <span>お申し込み</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ファーストビュー (Hero Section) -->
+    <section class="relative overflow-hidden bg-gradient-to-b from-brand-50 to-white pt-10 pb-20 md:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- テキストエリア -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center space-x-2 bg-brand-100 border border-brand-200 px-3 py-1 rounded-full text-brand-700 text-xs font-bold uppercase tracking-wider">
+                        <span class="flex h-2 w-2 rounded-full bg-brand-500 animate-ping"></span>
+                        <span>令和9年度オープンキャンパス予約受付中！</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 leading-tight">
+                        地球をハックする、<br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-tech-500">新時代の農業</span>へ。
+                    </h1>
+                    <p class="text-base sm:text-lg text-gray-600 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                        土を耕すだけが農業じゃない。ドローン、IoT、データサイエンス、そして地域ブランドの立ち上げまで。キミの「知的好奇心」が、未来の食と地球をデザインする。
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#register" class="w-full sm:w-auto text-center bg-brand-600 hover:bg-brand-700 text-white text-lg font-bold px-8 py-4 rounded-xl shadow-xl shadow-brand-200 hover:scale-[1.02] transition duration-200 flex items-center justify-center space-x-2">
+                            <i data-lucide="calendar" class="w-5 h-5"></i>
+                            <span>体験入学を予約する（無料）</span>
+                        </a>
+                        <a href="#why-us" class="w-full sm:w-auto text-center border-2 border-gray-200 hover:border-gray-300 text-gray-700 bg-white text-lg font-bold px-8 py-4 rounded-xl hover:bg-gray-50 transition duration-200 flex items-center justify-center space-x-2">
+                            <span>魅力を詳しく知る</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                    <!-- 特典バッジ -->
+                    <div class="flex items-center justify-center lg:justify-start space-x-6 pt-6 text-sm text-gray-500">
+                        <div class="flex items-center space-x-1.5">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-600"></i>
+                            <span>保護者同伴可</span>
+                        </div>
+                        <div class="flex items-center space-x-1.5">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-600"></i>
+                            <span>うれしいお土産付き</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- メインビジュアル -->
+                <div class="lg:col-span-5 relative">
+                    <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-brand-500 to-tech-500 opacity-20 blur-xl"></div>
+                    <div class="relative bg-white p-3 rounded-2xl shadow-2xl">
+                        <!-- 農業×テクノロジーを象徴するUnsplash画像 -->
+                        <img src="https://images.unsplash.com/photo-1592982537447-7440770cbfc9?auto=format&fit=crop&w=800&q=80" alt="スマート農業（タブレットとドローン）" class="w-full h-[320px] md:h-[400px] object-cover rounded-xl" onerror="this.src='https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&w=800&q=80'">
+                        
+                        <!-- フローティングUIカード (生徒の成果や最新スマート要素をビジュアルに上乗せ) -->
+                        <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg border border-gray-100 flex items-center space-x-3 hidden sm:flex animate-bounce" style="animation-duration: 3s;">
+                            <div class="p-2 bg-brand-100 rounded-lg text-brand-600">
+                                <i data-lucide="cpu" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500">ドローン操縦資格</p>
+                                <p class="text-sm font-bold text-gray-900">校内で取得可能！</p>
+                            </div>
+                        </div>
+                        <div class="absolute -top-6 -right-6 bg-white p-4 rounded-xl shadow-lg border border-gray-100 flex items-center space-x-3 hidden sm:flex">
+                            <div class="p-2 bg-yellow-100 rounded-lg text-yellow-600">
+                                <i data-lucide="star" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500">就職率</p>
+                                <p class="text-sm font-bold text-gray-900">100% 連続達成中</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 導入（ベネフィット）：なぜ今、農業高校なのか？ -->
+    <section id="why-us" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4">
+                <span class="text-brand-600 font-bold tracking-wider uppercase text-sm block">HOW IT'S CHANGED</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900">
+                    「昔ながらの農業」のイメージは、<br class="hidden sm:inline">もう古い。
+                </h2>
+                <p class="text-gray-600 text-base sm:text-lg">
+                    今の農業は、最先端のバイオテクノロジー、AIによるデータ解析、世界へと届けるブランディングビジネスが主役。高校から始める、これからの世界の「生き残りスキル」を体験しよう。
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+                <!-- 旧イメージ -->
+                <div class="p-8 bg-gray-100 rounded-2xl opacity-75 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 text-xs font-bold bg-gray-300 text-gray-700 rounded-bl-xl uppercase">昔の農業高校</div>
+                    <i data-lucide="trending-down" class="w-10 h-10 text-gray-400 mb-4"></i>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">手作業中心で体力まかせ？</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        「重労働が多くて、将来の進路も限定的になりそう…」「なんとなく昭和な古いイメージがある…」そう思われがちでした。
+                    </p>
+                </div>
+                <!-- 新イメージ -->
+                <div class="p-8 bg-gradient-to-br from-brand-900 to-tech-900 text-white rounded-2xl relative overflow-hidden shadow-xl shadow-brand-900/10 hover:shadow-brand-900/20 transition-all group">
+                    <div class="absolute top-0 right-0 p-4 text-xs font-bold bg-brand-500 text-white rounded-bl-xl uppercase tracking-wider">これからの未来農業</div>
+                    <i data-lucide="rocket" class="w-10 h-10 text-brand-200 mb-4 animate-pulse"></i>
+                    <h3 class="text-xl font-bold text-white mb-2">データと技術で稼ぐスマートビジネスへ</h3>
+                    <p class="text-sm text-brand-100 leading-relaxed">
+                        IoT制御された温室、ドローン空撮による収穫時期のAI予測、地域ブランドのネットショップ開設。マーケティングからテクノロジーまで、実社会で即活躍する力を育てます。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3つの強み・特徴 -->
+    <section id="features" class="py-20 bg-gray-50 border-y border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-brand-600 font-bold tracking-wider uppercase text-sm block">THREE STRENGTHS</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900">
+                    未来農業高等学院だけの「3つの強み」
+                </h2>
+                <p class="text-gray-600">
+                    普通科では絶対に学べない、これからのビジネスに不可欠な「リアルな経験」がここにあります。
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                
+                <!-- 特徴1：スマート農業 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-lg transition flex flex-col h-full">
+                    <div class="h-48 relative">
+                        <!-- ドローン・スマート農業画像 -->
+                        <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=600&q=80" alt="スマート農業イメージ" class="w-full h-full object-cover">
+                        <div class="absolute top-4 left-4 bg-brand-600 text-white font-bold text-xs px-3 py-1 rounded-full uppercase tracking-wider">TECH & DATA</div>
+                    </div>
+                    <div class="p-6 flex-grow space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <span class="w-8 h-8 rounded-full bg-brand-100 text-brand-700 font-extrabold flex items-center justify-center text-sm">1</span>
+                            <h3 class="text-lg font-bold text-gray-900">テクノロジーで学ぶスマート農業</h3>
+                        </div>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            校内の農場ではiPadとドローン、スマートセンサーを標準装備。経験と勘の農業から、データに基づいた持続可能で高効率な未来の農業を体験しながら習得します。
+                        </p>
+                        <ul class="space-y-1.5 text-xs text-gray-500 pt-2 border-t border-gray-100">
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-brand-500 mr-2"></i>ドローン自動運転プログラミング</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-brand-500 mr-2"></i>IoTセンサーによるビニールハウス自動管理</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 特徴2：地域ブランドビジネス -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-lg transition flex flex-col h-full">
+                    <div class="h-48 relative">
+                        <!-- オリジナル商品開発・地域連携画像 -->
+                        <img src="https://images.unsplash.com/photo-1488459718158-039018991114?auto=format&fit=crop&w=600&q=80" alt="フードビジネスイメージ" class="w-full h-full object-cover">
+                        <div class="absolute top-4 left-4 bg-yellow-500 text-white font-bold text-xs px-3 py-1 rounded-full uppercase tracking-wider">BUSINESS & DESIGN</div>
+                    </div>
+                    <div class="p-6 flex-grow space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <span class="w-8 h-8 rounded-full bg-yellow-100 text-yellow-700 font-extrabold flex items-center justify-center text-sm">2</span>
+                            <h3 class="text-lg font-bold text-gray-900">地域と連携したブランドビジネス</h3>
+                        </div>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            農作物の栽培だけにとどまらず、地域の有名企業とコラボして新たなスイーツや特産品をゼロから企画。デザイン、マーケティング、実際の販売活動まで自社感覚で学びます。
+                        </p>
+                        <ul class="space-y-1.5 text-xs text-gray-500 pt-2 border-t border-gray-100">
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-yellow-500 mr-2"></i>オリジナルジャム・加工食品のプロデュース</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-yellow-500 mr-2"></i>SNSを活用した情報発信とPR戦略</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 特徴3：進路サポート -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-lg transition flex flex-col h-full">
+                    <div class="h-48 relative">
+                        <!-- 進路・ラボイメージ -->
+                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80" alt="進路イメージ" class="w-full h-full object-cover">
+                        <div class="absolute top-4 left-4 bg-tech-500 text-white font-bold text-xs px-3 py-1 rounded-full uppercase tracking-wider">CAREER & VALUE</div>
+                    </div>
+                    <div class="p-6 flex-grow space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <span class="w-8 h-8 rounded-full bg-tech-100 text-tech-600 font-extrabold flex items-center justify-center text-sm">3</span>
+                            <h3 class="text-lg font-bold text-gray-900">未来を開く圧倒的な進路実績</h3>
+                        </div>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            卒業生は農業、食品企業だけでなく、IT業界、公務員、そして「総合型選抜（推薦入試）」を利用して難関大学（農学部・経営学部など）へ多数合格。多様なキャリアを約束します。
+                        </p>
+                        <ul class="space-y-1.5 text-xs text-gray-500 pt-2 border-t border-gray-100">
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-tech-500 mr-2"></i>食品メーカーや公務員（技術職）への高い就職率</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-tech-500 mr-2"></i>推薦入試に圧倒的有利な「独自のプロジェクト実績」</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 先輩の声 / 学校生活のイメージ -->
+    <section id="voices" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-brand-600 font-bold tracking-wider uppercase text-sm block">STUDENT INTERVIEWS</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900">
+                    「ここを選んでよかった！」先輩たちのリアルな声
+                </h2>
+                <p class="text-gray-600">
+                    普通科では味わえない、やりがいと学びに出会えた生徒たちをご紹介します。
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- ボイス1 -->
+                <div class="p-8 bg-brand-50 rounded-2xl border border-brand-100 relative">
+                    <span class="absolute top-6 right-6 text-6xl text-brand-200 font-serif leading-none">“</span>
+                    <div class="flex items-center space-x-4 mb-6">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80" alt="在校生の顔写真1" class="w-16 h-16 rounded-full object-cover border-2 border-white shadow-md">
+                        <div>
+                            <p class="font-extrabold text-gray-900">スマート農業専攻 3年</p>
+                            <p class="text-xs text-gray-500">Mさん（地元中学校出身）</p>
+                        </div>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-900 mb-2">「ゲーム感覚で始めたスマート農業で、ドローン操縦のプロに！」</h4>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        最初はただ「動物や自然が好き」なだけで入学しました。授業でiPadでの温度管理や、ドローンの空撮に挑戦するうちにITの面白さに目覚めました。校内でドローン操縦士の資格も取れ、この春から大手スマート農業技術企業へ就職が内定しました！
+                    </p>
+                </div>
+
+                <!-- ボイス2 -->
+                <div class="p-8 bg-tech-50 rounded-2xl border border-tech-100 relative">
+                    <span class="absolute top-6 right-6 text-6xl text-tech-200 font-serif leading-none">“</span>
+                    <div class="flex items-center space-x-4 mb-6">
+                        <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=150&h=150&q=80" alt="在校生の顔写真2" class="w-16 h-16 rounded-full object-cover border-2 border-white shadow-md">
+                        <div>
+                            <p class="font-extrabold text-gray-900">アグリビジネス専攻 2年</p>
+                            <p class="text-xs text-gray-500">Tくん（隣接都市の中学校出身）</p>
+                        </div>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-900 mb-2">「自分の作ったいちごジャムがお店に並んだ感動は一生モノです」</h4>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        地域ブランド食品の開発プロジェクトに惹かれて入学しました。地元のケーキ屋さんと連携して新作ジャムをデザインしたとき、マーケティングの難しさと面白さを知りました。実際にイベントで完売したときの喜びは、普通科の勉強だけでは得られない最高の財産です。
+                    </p>
+                </div>
+            </div>
+
+            <!-- 数字で見る実績 -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 text-center border-t border-gray-100 pt-16">
+                <div>
+                    <span class="text-4xl md:text-5xl font-black text-brand-600 block">100%</span>
+                    <span class="text-xs text-gray-500 font-medium">就職内定率（毎年実績）</span>
+                </div>
+                <div>
+                    <span class="text-4xl md:text-5xl font-black text-brand-600 block">45%</span>
+                    <span class="text-xs text-gray-500 font-medium">国公立・有名私立大学 進学率</span>
+                </div>
+                <div>
+                    <span class="text-4xl md:text-5xl font-black text-brand-600 block">15種以上</span>
+                    <span class="text-xs text-gray-500 font-medium">在学中取得可能な国家・公的資格</span>
+                </div>
+                <div>
+                    <span class="text-4xl md:text-5xl font-black text-brand-600 block">10社超</span>
+                    <span class="text-xs text-gray-500 font-medium">地域・大手企業との共同開発数</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- オープンキャンパス（イベント）概要 -->
+    <section id="event" class="py-20 bg-gray-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-brand-900/30 via-transparent to-transparent"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- イベント詳細 -->
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-brand-500 font-bold tracking-wider uppercase text-sm block">OPEN CAMPUS 2026</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold leading-tight">
+                        キミの未来を体感する、<br>特別な1日。
+                    </h2>
+                    <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
+                        授業や部活動の雰囲気を知るチャンス！実際にスマート機器を動かしたり、在校生が作ったオリジナルフードを試食できるプログラムを多数ご用意しています。
+                    </p>
+
+                    <!-- プログラム一覧 -->
+                    <div class="space-y-4 pt-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="p-1 bg-brand-500/20 text-brand-400 rounded mt-1">
+                                <i data-lucide="play" class="w-4 h-4"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm sm:text-base">農業ドローン 操縦デモンストレーション</h4>
+                                <p class="text-xs sm:text-sm text-gray-400">プログラミングで自動操縦するスマート農業を目の前で体験！</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="p-1 bg-brand-500/20 text-brand-400 rounded mt-1">
+                                <i data-lucide="play" class="w-4 h-4"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm sm:text-base">オリジナルアイス＆ジャム 試食・開発体験</h4>
+                                <p class="text-xs sm:text-sm text-gray-400">在校生が共同開発した絶品スイーツの試食と、アイデア出しに挑戦！</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="p-1 bg-brand-500/20 text-brand-400 rounded mt-1">
+                                <i data-lucide="play" class="w-4 h-4"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm sm:text-base">保護者向け キャリア・進路個別相談会</h4>
+                                <p class="text-xs sm:text-sm text-gray-400">就職実績、推薦枠を活用した大学進学パスポートについて詳しく解説。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 開催日程情報 -->
+                <div class="lg:col-span-6">
+                    <div class="bg-white/5 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/10 space-y-6">
+                        <h3 class="text-xl font-bold border-b border-white/10 pb-4 text-brand-400 flex items-center space-x-2">
+                            <i data-lucide="calendar" class="w-5 h-5"></i>
+                            <span>次回開催日程</span>
+                        </h3>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center bg-white/5 p-4 rounded-xl">
+                                <div>
+                                    <span class="text-xs text-gray-400 block">第1回：アグリテック編</span>
+                                    <span class="text-lg sm:text-xl font-extrabold text-white">7月19日（日）</span>
+                                    <span class="text-xs text-brand-400 block sm:inline sm:ml-2">10:00〜15:00</span>
+                                </div>
+                                <span class="bg-brand-600 text-xs font-bold py-1 px-3 rounded-full text-white">残りわずか</span>
+                            </div>
+                            <div class="flex justify-between items-center bg-white/5 p-4 rounded-xl">
+                                <div>
+                                    <span class="text-xs text-gray-400 block">第2回：フードビジネス編</span>
+                                    <span class="text-lg sm:text-xl font-extrabold text-white">8月23日（日）</span>
+                                    <span class="text-xs text-brand-400 block sm:inline sm:ml-2">10:00〜15:00</span>
+                                </div>
+                                <span class="bg-brand-600 text-xs font-bold py-1 px-3 rounded-full text-white">予約受付中</span>
+                            </div>
+                        </div>
+                        <div class="text-center pt-4">
+                            <p class="text-xs text-gray-400 mb-2">※ 無料シャトルバス運行あり（JR最寄り駅から直行）</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- よくある質問 (FAQ) -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-12">
+                <h2 class="text-3xl font-extrabold text-gray-900">よくあるご質問 (FAQ)</h2>
+                <p class="text-gray-600">保護者の皆様から多く寄せられる疑問にお答えします。</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
+                    <h4 class="font-extrabold text-gray-900 flex items-start space-x-3 text-base sm:text-lg">
+                        <span class="text-brand-600">Q.</span>
+                        <span>全く農業に触れたことがない初心者の子供でもついていけますか？</span>
+                    </h4>
+                    <p class="text-sm text-gray-600 mt-2 pl-7 leading-relaxed">
+                        はい、全く問題ありません。入学者の約8割は非農家の一般家庭出身です。最初は道具の使い方から丁寧に指導し、徐々にスマート機器の操作、バイオの実験などの専門技術を段階的に学べます。
+                    </p>
+                </div>
+                <!-- FAQ 2 -->
+                <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
+                    <h4 class="font-extrabold text-gray-900 flex items-start space-x-3 text-base sm:text-lg">
+                        <span class="text-brand-600">Q.</span>
+                        <span>農業高校を卒業した後の進学先には、どのような学校がありますか？</span>
+                    </h4>
+                    <p class="text-sm text-gray-600 mt-2 pl-7 leading-relaxed">
+                        国公立・有名私立の農学部はもちろん、総合型選抜（旧AO入試）などを活用して経営学部や環境科学系、さらには食品栄養・バイオ系の短期大学、専門学校に進学する生徒も多数います。実習で取り組んだ「プロジェクト実績」が進学面接での強力なアピールポイントになります。
+                    </p>
+                </div>
+                <!-- FAQ 3 -->
+                <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
+                    <h4 class="font-extrabold text-gray-900 flex items-start space-x-3 text-base sm:text-lg">
+                        <span class="text-brand-600">Q.</span>
+                        <span>体験入学に参加する場合、持ち物や服装はどうすれば良いですか？</span>
+                    </h4>
+                    <p class="text-sm text-gray-600 mt-2 pl-7 leading-relaxed">
+                        動きやすい服装（中学校の体操服や運動靴が望ましいです）でお越しください。校内実習などで一部屋外でのプログラムがありますので、帽子や飲み物、タオルをご持参ください。筆記用具や体験で使用する専門用具はすべてこちらで貸し出します。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- お申し込みフォーム (CTA) -->
+    <section id="register" class="py-20 bg-brand-900 text-white relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-12">
+                <h2 class="text-3xl sm:text-4xl font-extrabold">オープンキャンパスを予約する</h2>
+                <p class="text-brand-100 text-sm sm:text-base">
+                    ご参加いただくことで、パンフレットだけでは伝わらない学校のリアルな楽しさや最先端設備を体験していただけます。
+                </p>
+            </div>
+
+            <!-- フォームコンテナ -->
+            <div class="bg-white text-gray-900 rounded-3xl p-6 sm:p-10 shadow-2xl">
+                <!-- 簡易予約シミュレータ -->
+                <form id="bookingForm" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                    
+                    <!-- 日程選択 -->
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2">参加をご希望の日程 <span class="text-red-500 text-xs">必須</span></label>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <label class="border-2 border-gray-100 rounded-xl p-4 flex items-center justify-between cursor-pointer hover:border-brand-500 hover:bg-brand-50/50 transition" id="label-opt1">
+                                <div class="flex items-center space-x-3">
+                                    <input type="radio" name="event_date" value="7/19" class="h-4 w-4 text-brand-600 border-gray-300 focus:ring-brand-500" required checked onclick="updateBadge('opt1')">
+                                    <div>
+                                        <span class="block font-bold text-sm">7月19日（日）</span>
+                                        <span class="text-xs text-gray-500">アグリテック（ドローンなど）体験</span>
+                                    </div>
+                                </div>
+                                <span class="bg-red-100 text-red-700 text-[10px] font-bold px-2 py-0.5 rounded-full">残りわずか</span>
+                            </label>
+                            <label class="border-2 border-gray-100 rounded-xl p-4 flex items-center justify-between cursor-pointer hover:border-brand-500 hover:bg-brand-50/50 transition" id="label-opt2">
+                                <div class="flex items-center space-x-3">
+                                    <input type="radio" name="event_date" value="8/23" class="h-4 w-4 text-brand-600 border-gray-300 focus:ring-brand-500" onclick="updateBadge('opt2')">
+                                    <div>
+                                        <span class="block font-bold text-sm">8月23日（日）</span>
+                                        <span class="text-xs text-gray-500">フードビジネス（商品開発）体験</span>
+                                    </div>
+                                </div>
+                                <span class="bg-brand-100 text-brand-700 text-[10px] font-bold px-2 py-0.5 rounded-full">受付中</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- 基本情報入力 -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-bold text-gray-700 mb-1">お名前（ふりがな） <span class="text-red-500 text-xs">必須</span></label>
+                            <input type="text" id="name" required placeholder="のうぎょう たろう" class="w-full border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500">
+                        </div>
+                        <div>
+                            <label for="school" class="block text-sm font-bold text-gray-700 mb-1">現在の中学校名・学年</label>
+                            <input type="text" id="school" placeholder="〇〇市立第一中学校 3年" class="w-full border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500">
+                        </div>
+                    </div>
+
+                    <!-- 連絡先 -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label for="email" class="block text-sm font-bold text-gray-700 mb-1">メールアドレス <span class="text-red-500 text-xs">必須</span></label>
+                            <input type="email" id="email" required placeholder="yourname@example.com" class="w-full border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-bold text-gray-700 mb-1">電話番号（当日連絡先）</label>
+                            <input type="tel" id="phone" placeholder="090-0000-0000" class="w-full border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500">
+                        </div>
+                    </div>
+
+                    <!-- 参加人数 -->
+                    <div>
+                        <label for="count" class="block text-sm font-bold text-gray-700 mb-1">総参加人数</label>
+                        <select id="count" class="w-full border border-gray-300 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500">
+                            <option value="1">1名（本人のみ）</option>
+                            <option value="2" selected>2名（本人＋保護者1名）</option>
+                            <option value="3">3名以上（家族・友人と参加）</option>
+                        </select>
+                    </div>
+
+                    <!-- 個人情報保護への同意 -->
+                    <div class="flex items-start">
+                        <input type="checkbox" id="agree" required class="h-4 w-4 text-brand-600 border-gray-300 rounded focus:ring-brand-500 mt-0.5">
+                        <label for="agree" class="ml-2 text-xs text-gray-500 leading-relaxed">
+                            当校の<a href="#" class="text-brand-600 underline">個人情報保護方針</a>に同意のうえ、お申し込みを送信してください。ご登録いただいた情報は、今回の体験入学の連絡およびパンフレット送付以外には使用いたしません。
+                        </label>
+                    </div>
+
+                    <!-- 送信ボタン -->
+                    <button type="submit" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-extrabold text-lg py-4 rounded-xl shadow-lg transition duration-200 hover:scale-[1.01] flex items-center justify-center space-x-2">
+                        <i data-lucide="send" class="w-5 h-5"></i>
+                        <span>体験入学に申し込む</span>
+                    </button>
+                </form>
+
+                <!-- 送信完了メッセージ (デフォルト非表示) -->
+                <div id="successMessage" class="hidden text-center py-8 space-y-4">
+                    <div class="w-16 h-16 bg-brand-100 text-brand-600 rounded-full flex items-center justify-center mx-auto">
+                        <i data-lucide="check-circle" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900">ご予約ありがとうございます！</h3>
+                    <p class="text-sm text-gray-600 max-w-md mx-auto">
+                        ご入力いただいたメールアドレス宛に、当日の受付番号と持ち物、詳細なアクセス方法を自動送信いたしました。お気をつけてお越しください！
+                    </p>
+                    <button onclick="resetForm()" class="mt-6 border border-gray-300 text-gray-600 hover:bg-gray-50 text-xs px-4 py-2 rounded-lg">
+                        別の内容で申し込む
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                <!-- 学校情報 -->
+                <div class="md:col-span-6 space-y-4">
+                    <div class="flex items-center space-x-2 text-white">
+                        <div class="p-1.5 bg-brand-600 rounded text-white">
+                            <i data-lucide="sprout" class="w-5 h-5"></i>
+                        </div>
+                        <span class="text-lg font-bold">未来農業高等学院</span>
+                    </div>
+                    <p class="text-xs leading-relaxed max-w-sm">
+                        〒790-0000 愛媛県松山市未来町1-2-3<br>
+                        TEL: 0120-123-456（受付時間: 平日 9:00〜17:00）<br>
+                        Email: info@agritech-hs.ed.jp
+                    </p>
+                </div>
+                <!-- リンク -->
+                <div class="md:col-span-6 flex flex-wrap gap-x-6 gap-y-2 md:justify-end text-xs">
+                    <a href="#" class="hover:text-white transition">学校案内パンフレット(PDF)</a>
+                    <a href="#" class="hover:text-white transition">プライバシーポリシー</a>
+                    <a href="#" class="hover:text-white transition">運営団体 / アクセス</a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-xs">
+                <p>&copy; 2026 未来農業高等学院. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- スクリプト制御 -->
+    <script>
+        // Lucideアイコンの初期化
+        lucide.createIcons();
+
+        // フォーム送信のシミュレーション
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            // フォームのバリデーション、送信のふり
+            const form = document.getElementById('bookingForm');
+            const success = document.getElementById('successMessage');
+            
+            // アニメーション効果を付けながら表示切り替え
+            form.classList.add('hidden');
+            success.classList.remove('hidden');
+        }
+
+        // フォームのリセット
+        function resetForm() {
+            const form = document.getElementById('bookingForm');
+            const success = document.getElementById('successMessage');
+            
+            form.reset();
+            success.classList.add('hidden');
+            form.classList.remove('hidden');
+        }
+
+        // ラジオボタンのビジュアル選択状態コントロール
+        function updateBadge(selectedOpt) {
+            const label1 = document.getElementById('label-opt1');
+            const label2 = document.getElementById('label-opt2');
+            
+            if (selectedOpt === 'opt1') {
+                label1.classList.add('border-brand-500', 'bg-brand-50/50');
+                label2.classList.remove('border-brand-500', 'bg-brand-50/50');
+            } else {
+                label2.classList.add('border-brand-500', 'bg-brand-50/50');
+                label1.classList.remove('border-brand-500', 'bg-brand-50/50');
+            }
+        }
+    </script>
 </body>
 </html>
